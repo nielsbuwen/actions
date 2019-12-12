@@ -29,4 +29,7 @@ jobs:
         tag = 'GITHUB_REF'.split('/')[-1]
         print(tag)
         print('__version__ =', tag)
-        " EOF
+        "
+        EOF > version.py
+        echo "VERSION"
+        cat version.py
