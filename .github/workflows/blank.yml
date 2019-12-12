@@ -26,7 +26,7 @@ jobs:
     - name: Print Env
       run: |
         python -c << EOF "
-        print(1)
-        print(2)
-        print('$GITHUB_REF')
+        tag = 'GITHUB_REF'.split('/')[-1]
+        print(tag)
+        print("__version__", "=", tag)
         " EOF
