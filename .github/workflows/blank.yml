@@ -17,5 +17,16 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+        
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+      
     - name: Print Env
-      run: echo $GITHUB_REF
+      run: |
+        python -c << EOF "
+        print(1)
+        print(2)
+        print('$GITHUB_REF')
+        " EOF
