@@ -25,11 +25,6 @@ jobs:
       
     - name: Print Env
       run: |
-        python -c << EOF "
-        tag = 'GITHUB_REF'.split('/')[-1]
-        print(tag)
-        print('__version__ =', tag)
-        "
-        EOF > version.py
+        python -c "print('__version__ =', 'GITHUB_REF'.split('/')[-1])" > version.py
         echo "VERSION"
         cat version.py
