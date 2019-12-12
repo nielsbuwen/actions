@@ -28,5 +28,5 @@ jobs:
         python -c << EOF "
         tag = 'GITHUB_REF'.split('/')[-1]
         print(tag)
-        print("__version__", "=", tag)
+        print('__version__ =', tag)
         " EOF
